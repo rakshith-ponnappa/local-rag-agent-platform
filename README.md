@@ -19,16 +19,16 @@ production components (a managed vector DB, hosted embeddings, a gateway).
 ```mermaid
 flowchart LR
   subgraph Offline["Offline pipeline"]
-    D[sample_docs/*.md] --> I[rag_ingest<br/>chunk 400 / overlap 80]
-    I --> C[(chunks.jsonl)]
-    C --> X[index_corpus<br/>embed]
-    X --> V[(index.json<br/>vector store)]
-    V --> E[eval_retrieval<br/>Hit@k, P@k, R@k, MRR]
-    L[(retrieval_eval.json<br/>labelled queries)] --> E
+    D["sample_docs/*.md"] --> I["rag_ingest<br/>chunk 400 / overlap 80"]
+    I --> C[("chunks.jsonl")]
+    C --> X["index_corpus<br/>embed"]
+    X --> V[("index.json<br/>vector store")]
+    V --> E["eval_retrieval<br/>Hit@k, P@k, R@k, MRR"]
+    L[("retrieval_eval.json<br/>labelled queries")] --> E
   end
   subgraph API["FastAPI service"]
-    S["POST /search"] --> Q[embed query] --> V
-    CH["POST /chat"] --> O[Ollama /api/generate]
+    S["POST /search"] --> Q["embed query"] --> V
+    CH["POST /chat"] --> O["Ollama /api/generate"]
     H["GET /health"]
   end
 ```
