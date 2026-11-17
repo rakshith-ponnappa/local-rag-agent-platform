@@ -1,0 +1,24 @@
+{
+  "description": "Labeled retrieval eval set for sample_docs/. Each case pairs a query with the chunk_ids that contain the answer. Chunk IDs are deterministic for the build settings below; regenerate labels if you change the corpus, chunk_size, or overlap.",
+  "build": {
+    "input_dir": "sample_docs",
+    "chunk_size": 400,
+    "overlap": 80
+  },
+  "cases": [
+    {"query": "what is aiops about", "relevant_chunk_ids": ["144b772f9d71cc7f"]},
+    {"query": "reliable ai systems in production", "relevant_chunk_ids": ["144b772f9d71cc7f"]},
+    {"query": "mlops lifecycle automation and governance", "relevant_chunk_ids": ["144b772f9d71cc7f"]},
+    {"query": "smallest deployable unit in kubernetes", "relevant_chunk_ids": ["1c933e70f8f49964"]},
+    {"query": "how do rolling updates avoid downtime", "relevant_chunk_ids": ["1c933e70f8f49964"]},
+    {"query": "service types clusterip nodeport loadbalancer", "relevant_chunk_ids": ["9ff00c107bfde5fa"]},
+    {"query": "when is a pod removed from service endpoints", "relevant_chunk_ids": ["9ff00c107bfde5fa"]},
+    {"query": "debug image pull errors with kubectl", "relevant_chunk_ids": ["aff7bb732a0aa12e"]},
+    {"query": "three signals of observability", "relevant_chunk_ids": ["2cc627776e267912"]},
+    {"query": "what is a span in a trace", "relevant_chunk_ids": ["cc76a671234c4017"]},
+    {"query": "what is an error budget", "relevant_chunk_ids": ["d05fd89e50664d6b"]},
+    {"query": "cosine similarity for normalized vectors", "relevant_chunk_ids": ["a0f5fd6f230f3c80"]},
+    {"query": "approximate nearest neighbor search over millions of vectors", "relevant_chunk_ids": ["7e704df76ca33b52"]},
+    {"query": "why should neighbouring chunks overlap", "relevant_chunk_ids": ["7e704df76ca33b52", "5b7a6dd3a6bd7ac8"]}
+  ]
+}

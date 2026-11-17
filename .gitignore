@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv*/
+venv/
+env/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Generated RAG artifacts (chunk corpora, vector indexes)
+artifacts/
+data/
+*.index.json
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
